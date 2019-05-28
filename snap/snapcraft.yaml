@@ -63,7 +63,7 @@ parts:
       cat <<EOF> launch.sh
       #!/bin/bash
       set -e
-      cd $SNAPCRAFT_USER_COMMON
+      cd \$SNAPCRAFT_USER_COMMON
       \$SNAP/DistributedChaffinMethod "\$@"
       EOF
       snapcraftctl set-version "$(grep 'Current version:' DistributedChaffinMethod.c | sed -e 's/Current version: //')"
